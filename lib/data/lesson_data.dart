@@ -1,7 +1,6 @@
 import '../models/lesson_model.dart';
 
 final List<Lesson> dummyLessons = [
-  // Lessons for Materi 1 - Belajar Huruf Hijaiyah (14 lessons, all completed)
   Lesson(
     id: 1,
     materiId: 1,
@@ -38,8 +37,6 @@ final List<Lesson> dummyLessons = [
     score: 79,
     content: "Huruf Dal dan Dzal tidak dapat disambung...",
   ),
-  
-  // Lessons for Materi 2 - Belajar Bentuk dan Bacaan (20 lessons, 10 completed)
   Lesson(
     id: 5,
     materiId: 2,
@@ -130,7 +127,6 @@ final List<Lesson> dummyLessons = [
     score: 85,
     content: "Tanwin kasrah berbunyi 'in'...",
   ),
-  // 10 lessons lagi untuk materi 2 (belum selesai)
   Lesson(
     id: 15,
     materiId: 2,
@@ -140,8 +136,6 @@ final List<Lesson> dummyLessons = [
     score: 0,
     content: "Tanwin dhammah berbunyi 'un'...",
   ),
-  
-  // Lessons for Materi 3 - Mengenal Harakat (8 lessons, all completed)
   Lesson(
     id: 20,
     materiId: 3,
@@ -151,8 +145,6 @@ final List<Lesson> dummyLessons = [
     score: 92,
     content: "Harakat adalah tanda baca dalam bahasa Arab...",
   ),
-  
-  // Lessons for Materi 5 - Makhorijul Huruf (15 lessons, all completed)
   Lesson(
     id: 30,
     materiId: 5,
@@ -162,8 +154,6 @@ final List<Lesson> dummyLessons = [
     score: 88,
     content: "Huruf halqiah keluar dari tenggorokan...",
   ),
-  
-  // Lessons for Materi 6 - Shifatul Huruf (18 lessons, 5 completed)
   Lesson(
     id: 40,
     materiId: 6,
@@ -209,9 +199,6 @@ final List<Lesson> dummyLessons = [
     score: 87,
     content: "Izlaq adalah lancar, ishmaat adalah tidak lancar...",
   ),
-  // 13 lessons lagi untuk materi 6 (belum selesai)
-  
-  // Lessons for Materi 7 - Hukum Nun Mati dan Tanwin (16 lessons, 12 completed)
   Lesson(
     id: 50,
     materiId: 7,
