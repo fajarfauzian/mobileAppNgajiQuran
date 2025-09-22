@@ -3,7 +3,7 @@ import 'home_screen.dart';
 import 'kelas_screen.dart';
 import 'tadarus_screen.dart';
 import 'amalan_screen.dart';
-import '../widgets/custom_appbar.dart'; // pastikan ini file navbar
+import '../widgets/custom_appbar.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -13,8 +13,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  // _navIndex adalah posisi di bottom nav (0..4)
-  // _pageIndex adalah index di daftar halaman (0..3)
   int _navIndex = 0;
   int _pageIndex = 0;
 
@@ -27,14 +25,17 @@ class _MainScreenState extends State<MainScreen> {
 
   void _onNavTapped(int index) {
     if (index == 2) {
-      // item tengah: hanya icon, tidak navigasi
-      // kamu bisa ganti jadi open modal / showDialog jika mau
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const QuranReaderScreen(),
+        ),
+      );
       return;
     }
 
     setState(() {
       _navIndex = index;
-      // jika index > 2, geser -1 agar sesuai list _pages
       _pageIndex = index > 2 ? index - 1 : index;
     });
   }
@@ -42,12 +43,64 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[50],
       body: _pages[_pageIndex],
       bottomNavigationBar: CustomNavBar(
         currentIndex: _navIndex,
         onTap: _onNavTapped,
       ),
-      // Hapus floatingActionButton supaya icon tengah tidak tertutup
+    );
+  }
+}
+
+class QuranReaderScreen extends StatelessWidget {
+  const QuranReaderScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text(
+          'Al-Quran',
+          style: TextStyle(
+            color: Colors.green,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.white,
+        elevation: 0,
+        iconTheme: const IconThemeData(color: Colors.green),
+      ),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.menu_book_rounded,
+              size: 100,
+              color: Colors.green,
+            ),
+            SizedBox(height: 24),
+            Text(
+              'Al-Quran Digital',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.green,
+              ),
+            ),
+            SizedBox(height: 12),
+            Text(
+              'Halaman Al-Quran akan segera hadir',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

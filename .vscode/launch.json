@@ -1,0 +1,10 @@
+{
+   "configurations": [
+      {
+         "name": "Flutter (lib\\widgets\\quick_access.dart)",
+         "type": "dart",
+         "request": "launch",
+         "program": "lib\\widgets\\quick_access.dart"
+      }
+   ]
+}

@@ -1,0 +1,228 @@
+import '../models/lesson_model.dart';
+
+final List<Lesson> dummyLessons = [
+  // Lessons for Materi 1 - Belajar Huruf Hijaiyah (14 lessons, all completed)
+  Lesson(
+    id: 1,
+    materiId: 1,
+    title: "Huruf Alif dan Ba",
+    description: "Mempelajari huruf Alif (ا) dan Ba (ب)",
+    isCompleted: true,
+    score: 73,
+    content: "Huruf Alif adalah huruf pertama dalam abjad Arab...",
+  ),
+  Lesson(
+    id: 2,
+    materiId: 1,
+    title: "Huruf Ta dan Tsa",
+    description: "Mempelajari huruf Ta (ت) dan Tsa (ث)",
+    isCompleted: true,
+    score: 78,
+    content: "Huruf Ta memiliki titik dua di atasnya...",
+  ),
+  Lesson(
+    id: 3,
+    materiId: 1,
+    title: "Huruf Jim, Ha, Kho",
+    description: "Mempelajari huruf Jim (ج), Ha (ح), dan Kho (خ)",
+    isCompleted: true,
+    score: 78,
+    content: "Kelompok huruf halaqiah...",
+  ),
+  Lesson(
+    id: 4,
+    materiId: 1,
+    title: "Huruf Dal dan Dzal",
+    description: "Mempelajari huruf Dal (د) dan Dzal (ذ)",
+    isCompleted: true,
+    score: 79,
+    content: "Huruf Dal dan Dzal tidak dapat disambung...",
+  ),
+  
+  // Lessons for Materi 2 - Belajar Bentuk dan Bacaan (20 lessons, 10 completed)
+  Lesson(
+    id: 5,
+    materiId: 2,
+    title: "Bentuk Huruf di Awal Kata",
+    description: "Mempelajari bentuk huruf saat berada di awal kata",
+    isCompleted: true,
+    score: 85,
+    content: "Bentuk huruf di awal kata...",
+  ),
+  Lesson(
+    id: 6,
+    materiId: 2,
+    title: "Bentuk Huruf di Tengah Kata",
+    description: "Mempelajari bentuk huruf saat berada di tengah kata",
+    isCompleted: true,
+    score: 82,
+    content: "Bentuk huruf di tengah kata...",
+  ),
+  Lesson(
+    id: 7,
+    materiId: 2,
+    title: "Bentuk Huruf di Akhir Kata",
+    description: "Mempelajari bentuk huruf saat berada di akhir kata",
+    isCompleted: true,
+    score: 90,
+    content: "Bentuk huruf di akhir kata...",
+  ),
+  Lesson(
+    id: 8,
+    materiId: 2,
+    title: "Bentuk Huruf Terpisah",
+    description: "Mempelajari bentuk huruf saat berdiri sendiri",
+    isCompleted: true,
+    score: 88,
+    content: "Bentuk huruf terpisah...",
+  ),
+  Lesson(
+    id: 9,
+    materiId: 2,
+    title: "Bacaan Huruf dengan Fathah",
+    description: "Mempelajari cara membaca huruf dengan harakat fathah",
+    isCompleted: true,
+    score: 75,
+    content: "Fathah membuat huruf berbunyi 'a'...",
+  ),
+  Lesson(
+    id: 10,
+    materiId: 2,
+    title: "Bacaan Huruf dengan Kasrah",
+    description: "Mempelajari cara membaca huruf dengan harakat kasrah",
+    isCompleted: true,
+    score: 80,
+    content: "Kasrah membuat huruf berbunyi 'i'...",
+  ),
+  Lesson(
+    id: 11,
+    materiId: 2,
+    title: "Bacaan Huruf dengan Dhammah",
+    description: "Mempelajari cara membaca huruf dengan harakat dhammah",
+    isCompleted: true,
+    score: 77,
+    content: "Dhammah membuat huruf berbunyi 'u'...",
+  ),
+  Lesson(
+    id: 12,
+    materiId: 2,
+    title: "Bacaan Huruf Sukun",
+    description: "Mempelajari cara membaca huruf dengan tanda sukun",
+    isCompleted: true,
+    score: 83,
+    content: "Sukun menandakan huruf mati...",
+  ),
+  Lesson(
+    id: 13,
+    materiId: 2,
+    title: "Bacaan Tanwin Fathah",
+    description: "Mempelajari cara membaca tanwin fathah",
+    isCompleted: true,
+    score: 79,
+    content: "Tanwin fathah berbunyi 'an'...",
+  ),
+  Lesson(
+    id: 14,
+    materiId: 2,
+    title: "Bacaan Tanwin Kasrah",
+    description: "Mempelajari cara membaca tanwin kasrah",
+    isCompleted: true,
+    score: 85,
+    content: "Tanwin kasrah berbunyi 'in'...",
+  ),
+  // 10 lessons lagi untuk materi 2 (belum selesai)
+  Lesson(
+    id: 15,
+    materiId: 2,
+    title: "Bacaan Tanwin Dhammah",
+    description: "Mempelajari cara membaca tanwin dhammah",
+    isCompleted: false,
+    score: 0,
+    content: "Tanwin dhammah berbunyi 'un'...",
+  ),
+  
+  // Lessons for Materi 3 - Mengenal Harakat (8 lessons, all completed)
+  Lesson(
+    id: 20,
+    materiId: 3,
+    title: "Pengenalan Harakat",
+    description: "Memahami apa itu harakat dan fungsinya",
+    isCompleted: true,
+    score: 92,
+    content: "Harakat adalah tanda baca dalam bahasa Arab...",
+  ),
+  
+  // Lessons for Materi 5 - Makhorijul Huruf (15 lessons, all completed)
+  Lesson(
+    id: 30,
+    materiId: 5,
+    title: "Makhraj Huruf Halq",
+    description: "Mempelajari huruf yang keluar dari tenggorokan",
+    isCompleted: true,
+    score: 88,
+    content: "Huruf halqiah keluar dari tenggorokan...",
+  ),
+  
+  // Lessons for Materi 6 - Shifatul Huruf (18 lessons, 5 completed)
+  Lesson(
+    id: 40,
+    materiId: 6,
+    title: "Sifat Jaar dan Mahmus",
+    description: "Mempelajari sifat huruf jaar dan mahmus",
+    isCompleted: true,
+    score: 85,
+    content: "Sifat jaar adalah bersuara, mahmus tidak bersuara...",
+  ),
+  Lesson(
+    id: 41,
+    materiId: 6,
+    title: "Sifat Syiddah dan Rakhwah",
+    description: "Mempelajari sifat huruf syiddah dan rakhwah",
+    isCompleted: true,
+    score: 78,
+    content: "Sifat syiddah adalah kuat, rakhwah adalah lemah...",
+  ),
+  Lesson(
+    id: 42,
+    materiId: 6,
+    title: "Sifat Isti'la dan Istifal",
+    description: "Mempelajari sifat huruf isti'la dan istifal",
+    isCompleted: true,
+    score: 82,
+    content: "Isti'la adalah tebal, istifal adalah tipis...",
+  ),
+  Lesson(
+    id: 43,
+    materiId: 6,
+    title: "Sifat Itbaq dan Infitah",
+    description: "Mempelajari sifat huruf itbaq dan infitah",
+    isCompleted: true,
+    score: 90,
+    content: "Itbaq adalah tertutup, infitah adalah terbuka...",
+  ),
+  Lesson(
+    id: 44,
+    materiId: 6,
+    title: "Sifat Izlaq dan Ishmaat",
+    description: "Mempelajari sifat huruf izlaq dan ishmaat",
+    isCompleted: true,
+    score: 87,
+    content: "Izlaq adalah lancar, ishmaat adalah tidak lancar...",
+  ),
+  // 13 lessons lagi untuk materi 6 (belum selesai)
+  
+  // Lessons for Materi 7 - Hukum Nun Mati dan Tanwin (16 lessons, 12 completed)
+  Lesson(
+    id: 50,
+    materiId: 7,
+    title: "Hukum Izhhar",
+    description: "Mempelajari hukum izhhar dalam nun mati dan tanwin",
+    isCompleted: true,
+    score: 85,
+    content: "Izhhar berarti jelas, terjadi jika nun mati bertemu...",
+  ),
+];
+
+List<Lesson> getLessonsByMateriId(int materiId) {
+  return dummyLessons.where((lesson) => lesson.materiId == materiId).toList();
+}
