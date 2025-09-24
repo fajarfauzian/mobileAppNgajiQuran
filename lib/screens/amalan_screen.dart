@@ -213,7 +213,7 @@ class _AmalanScreenState extends State<AmalanScreen> {
     } else if (hour < 18) {
       return 'Waktu untuk dzikir sore 🌅';
     } else {
-      return 'Malam yang penuh keberkahan 🌙';
+      return 'Malam yang penuh berkah 🌙';
     }
   }
 }

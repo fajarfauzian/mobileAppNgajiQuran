@@ -35,7 +35,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListView(
       padding: const EdgeInsets.all(0),
       children: [
-        // Hero Banner
         HeroBanner(
           onViewAllPressed: () {
             Navigator.push(

@@ -33,7 +33,6 @@ class MateriDetailScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Header Info Card
           Container(
             color: Colors.white,
             padding: const EdgeInsets.all(20),

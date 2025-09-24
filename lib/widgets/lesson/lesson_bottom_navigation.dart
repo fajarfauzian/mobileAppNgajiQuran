@@ -72,7 +72,6 @@ class LessonBottomNavigation extends StatelessWidget {
 
           const SizedBox(width: 12),
 
-          // Next Letter/Lesson Button
           Expanded(
             child: ElevatedButton(
               onPressed: onNextPressed,
@@ -90,7 +89,7 @@ class LessonBottomNavigation extends StatelessWidget {
                   Text(
                     currentLetterIndex < letters.length - 1
                         ? 'Huruf ${letters[currentLetterIndex + 1]['name']!}'
-                        : 'Pembelajaran Selanjutnya',
+                        : 'Selanjutnya',
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(width: 8),
